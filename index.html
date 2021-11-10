@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billal Siddiqi</title>
+    <link rel="stylesheet" href="./public/build/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+
+    <style>
+        .page-title h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: rgba(0, 0, 0, 0.200);
+        }
+        .page-title h3::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            bottom: -5px;
+            width: 40%;
+            height: 3px;
+            background-color: #FF7549;
+        }
+        .activeClient {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-poppins max-w-screen-2xl">
+    
+        <section id="mobile-menu" class=" absolute h-screen bg-white w-full hidden">
+            <img id="close" src="./public/img/close.png" alt="Close Menu" class="w-8 absolute right-5">
+            <div class="h-full flex justify-center items-center">
+                <ul>
+                    <li class="text-3xl"><a href="https://github.com/billalsiddiqi" target="_blank">github</a></li>
+                    <li class="text-3xl my-4"><a href="https://af.linkedin.com/in/khwaja-billal-siddiqi-841092150" target="_blank">linkedIn</a></li>
+                    <li class="text-3xl"><a href="https://medium.com/@billalsiddiqi" target="_blank">medium</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="hero" class="mx-5 lg:mx-0">
+            <div id="header" class="flex items-center justify-between mt-6 lg:mt-0 lg:pt-6 lg:mx-12 xl:mx-24">
+                <img src="./public/img/Logo.svg" alt="Billal Siddiqi's Logo" class="w-12">     
+                <img id="burger" src="./public/img/burger-icon.png" alt="Open Menu" class="lg:hidden">
+                <div id="menu-items" class="hidden lg:block">
+                    <ul class="flex">
+                        <li class="text-lg"><a href="https://github.com/billalsiddiqi" target="_blank">github</a></li>
+                        <li class="text-lg mx-6"><a href="https://af.linkedin.com/in/khwaja-billal-siddiqi-841092150" target="_blank">linkedIn</a></li>
+                        <li class="text-lg"><a href="https://medium.com/@billalsiddiqi" target="_blank">medium</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main" class="flex flex-col lg:flex-row items-center justify-center my-14">
+                <div class="left">
+                    <div class="prfile-pic">
+                        <img src="./public/img/profile.jpg" alt="Profile Picture" class="object-cover rounded-full shadow-xl h-36 w-36 lg:mr-6 lg:w-52 lg:h-52">
+                    </div>
+                </div>
+                <div class="right lg:max-w-md">
+                    <div class="text-center lg:text-left title">
+                        <h3 class="mt-8 text-2xl capitalize lg:text-lg">web-developer</h3>
+                        <h1 class="mt-2 text-5xl uppercase lg:text-4xl">Billal <span class="font-bold">Siddiqi</span></h1>
+                    </div>
+                    <div class="content">
+                        <p class="w-11/12 m-auto lg:mx-0 text-xl text-center lg:text-left lg:text-base my-7">
+                            For start I’m a full-stack Web Devlopoer. <br>
+                            Lots to discuss, so if you wanna more details on how I handled my projects in the last two years. <br>
+                            Take a break and download my Resume!
+                        </p>
+                    </div>
+                    <div class="flex flex-col lg:flex-row items-center lg:justify-between">
+                        <button class="py-3 lg:py-2 mb-5 lg:mb-0 lg:text-base text-xl font-semibold border border-orange px-5">Download CV</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clients" class="mt-24 lg:mx-12 xl:mx-24">
+            <div class="text-center lg:text-left page-title"> 
+                <h3 class="relative inline-block text-3xl font-semibold">Clients</h3>
+            </div>
+            <div id="clients-list-desktop" class="hidden lg:block mt-4">
+                <ul class="flex justify-start items-center flex-wrap">
+                    <li><img src="./public/img/hike-logo.png" class="w-60 lg:w-40 mr-10 mt-4" alt="Hikeventures Logo"></li>
+                    <li><img src="./public/img/ayp-logo.png" class="w-60 lg:w-40 mr-10 mt-4" alt="Yellow Pages Afghanistan"></li>
+                    <li><img src="./public/img/summit-logo.png" class="w-60 lg:w-40 mr-10 mt-4" alt="AYP Summit Logo"></li>
+                    <li><img src="./public/img/ehtesab.png" class="w-60 lg:w-40 mr-10 mt-4" alt="Ehtesab Logo"></li>
+                </ul>
+            </div>
+            <div id="clients-list-mobile" class="slider flex flex-row items-center mt-10 text-center overflow-hidden lg:hidden">
+                <img src="./public/img/hike-logo.png" class="absolute left-1/2 transform -translate-x-1/2 c-img w-60" alt="Hikeventures Logo">
+                <img src="./public/img/ayp-logo.png"  class="absolute left-1/2 transform -translate-x-1/2 c-img w-60" alt="Yellow Pages Afghanistan Logo">
+                <img src="./public/img/summit-logo.png" class="absolute left-1/2 transform -translate-x-1/2 c-img w-60" alt="AYP Summit Logo">
+                <img src="./public/img/ehtesab.png" class="absolute left-1/2 transform -translate-x-1/2 c-img w-60" alt="Ehtesab Logo">
+            </div>
+        </section>
+        <section id="blog" class="mt-24 lg:mx-12 xl:mx-24">
+            <div class="text-center lg:text-left page-title "> 
+                <img src="./public/img/external.png" alt="Exteranl Link" class="inline w-5 mb-3 mr-1">
+                <h3 class="relative inline-block text-3xl font-semibold">Latest Blog</h3>
+            </div>
+            <div class="blogs lg:flex lg:flex-wrap lg:mt-10">
+                <div class="single-blog w-10/12 m-auto lg:m-0 lg:max-w-md xl:max-w-xl text-center lg:text-left lg:py-4 mt-10">
+                    <a href="https://medium.com/@billalsiddiqi/local-storage-store-data-into-the-users-browser-42956fb7f79e" target="_blank"><h2 class="text-xl font-semibold">Local Storage: Store data into the user’s browser</h2></a>
+                    <p class="text-lg">To avoid the long process of store a user's simple activities in the database is to store them in his/her browser...</p>
+                </div>
+                <div class="single-blog w-10/12 m-auto lg:m-0 lg:max-w-md xl:max-w-xl text-center lg:text-left lg:py-4 mt-10">
+                    <a href="https://medium.com/@billalsiddiqi/how-to-do-maintenance-on-a-live-website-laravel-8-587f09aecd0e" target="_blank"><h2 class="text-xl font-semibold">How to do maintenance on a live website (Laravel 8)</h2></a>
+                    <p class="text-lg">Maintenance injects fresh blood into the application. After deploying your application to production it needs to be maintained...</p>
+                </div>
+                <div class="single-blog w-10/12 m-auto lg:m-0 lg:max-w-md xl:max-w-xl text-center lg:text-left lg:py-4 mt-10">
+                    <a href="https://medium.com/@billalsiddiqi/how-to-customize-error-messages-in-laravel-8-99fef9609475" target="_blank"><h2 class="text-xl font-semibold">How to customize error messages in Laravel 8</h2></a>
+                    <p class="text-lg">On a website, validation errors and full-page errors are ways to show the user that the request does not proceed so they...</p>
+                </div>
+                <div class="single-blog w-10/12 m-auto lg:m-0 lg:max-w-md xl:max-w-xl text-center lg:text-left lg:py-4 mt-10">
+                    <a href="https://medium.com/@billalsiddiqi/professional-ways-to-set-layout-for-websites-for-beginners-2-6f87ebede4a8" target="_blank"><h2 class="text-xl font-semibold">Professional ways to set Layout for websites(For Beginners) #2</h2></a>
+                    <p class="text-lg">On the other hand, for setting Layouts, you can have your own bootstrap. A list of requirements is the first and the most important step of having...</p>
+                </div>
+            </div>
+        </section>
+        <div class="h-12"></div>
+        <section id="footer">
+            <p class="text-center py-4">Copyright <span class="font-semibold">©2021</span> All rights reserved.</p>
+        </section>
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.getElementById('burger')
+        const close = document.getElementById('close')
+        const menu  = document.getElementById('mobile-menu')
+
+        burger.addEventListener('click', ()=> {
+            menu.classList.remove('hidden')
+            const x=window.scrollX;
+            const y=window.scrollY;
+            window.onscroll= () => {
+                window.scrollTo(x, y);
+            };
+        })
+        close.addEventListener('click', ()=> {
+            menu.classList.add('hidden')
+            window.onscroll= () => {};
+
+        })
+        // Clinets Slider
+        const elements = document.querySelectorAll(".c-img")
+        function autoplay(run) {
+            clearInterval(interval)
+            interval = setInterval(() => {
+                if (run && slider) {
+                slider.next()
+                }
+            }, 2000)
+            }
+        const slider = new KeenSlider(".slider", {
+        slides: elements.length,
+        loop: true,
+        duration: 1000,
+        move: (s) => {
+          let opacities = s.details().positions.map((slide) => slide.portion)
+          elements.forEach((element, idx) => {
+            element.style.opacity = opacities[idx]
+          })
+        },
+      })
+    </script>
+</body>
+</html>
