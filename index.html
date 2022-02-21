@@ -9,16 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKL6VE59YN"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-VKL6VE59YN');
+        gtag('config', 'G-VKL6VE59YN');
     </script>
 
     <style>
@@ -86,13 +86,13 @@
                     </div>
                     <div class="flex flex-col lg:flex-row items-center lg:justify-between">
                         <a href="/public/Resume.pdf" download>
-                            <button class="py-3 lg:py-2 mb-5 lg:mb-0 lg:text-base text-xl font-semibold border border-orange px-5">Download CV</button>
+                            <button class="py-3 lg:py-2 mb-5 lg:mb-0 lg:text-base text-xl font-semibold border border-orange px-5">Download Resume</button>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="clients" class="mt-24 lg:mx-12 xl:mx-24">
+        <section id="clients" class="mt-24 lg:mx-12 xl:mx-24 hidden lg:block">
             <div class="text-center lg:text-left page-title"> 
                 <h3 class="relative inline-block text-3xl font-semibold">Clients</h3>
             </div>
@@ -104,13 +104,12 @@
                     <li><img src="./public/img/ehtesab.png" class="w-60 lg:w-40 mr-10 mt-4" alt="Ehtesab Logo"></li>
                 </ul>
             </div>
-            <div id="clients-list-mobile" class="slider flex flex-row items-center mt-10 text-center overflow-hidden lg:hidden">
+            <div id="clients-list-mobile" class="slider flex flex-row items-center mt-10 text-center overflow-hidden hidden">
                 <img src="./public/img/hike-logo.png" class="absolute left-1/2 transform -translate-x-1/2 c-img w-60 my-4" alt="Hikeventures Logo">
                 <img src="./public/img/ayp-logo.png"  class="absolute left-1/2 transform -translate-x-1/2 c-img w-60 my-4" alt="Yellow Pages Afghanistan Logo">
                 <img src="./public/img/summit-logo.png" class="absolute left-1/2 transform -translate-x-1/2 c-img w-60 my-4" alt="AYP Summit Logo">
                 <img src="./public/img/ehtesab.png" class="absolute left-1/2 transform -translate-x-1/2 c-img w-60 my-4" alt="Ehtesab Logo">
             </div>
-            <img id="next" src="./public/img/arrow-right.png" alt="Arrow Right" class="w-6 absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden">
         </section>
         <section id="blog" class="mt-28 lg:mt-24 lg:mx-12 xl:mx-24">
             <div class="text-center lg:text-left page-title "> 
@@ -140,7 +139,7 @@
         <section id="footer">
             <p class="text-center py-4">Copyright <span class="font-semibold">©2021</span> All rights reserved.</p>
         </section>
-    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+    
     <script>
         // Mobile Menu Toggle
         const burger = document.getElementById('burger')
@@ -160,27 +159,6 @@
             window.onscroll= () => {};
 
         })
-        // Clinets Slider
-        const elements = document.querySelectorAll(".c-img")
-        function autoplay(run) {
-            clearInterval(interval)
-            interval = setInterval(() => {
-                if (run && slider) {
-                slider.next()
-                }
-            }, 2000)
-            }
-        const slider = new KeenSlider(".slider", {
-        slides: elements.length,
-        loop: true,
-        duration: 1000,
-        move: (s) => {
-          let opacities = s.details().positions.map((slide) => slide.portion)
-          elements.forEach((element, idx) => {
-            element.style.opacity = opacities[idx]
-          })
-        },
-      })
     </script>
 </body>
 </html>
