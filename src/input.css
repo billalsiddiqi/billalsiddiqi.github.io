@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+      font-family: Cyber City;
+      src: url(../dist/fonts/Cyber\ City.woff2) format("woff");
+    }
+  }

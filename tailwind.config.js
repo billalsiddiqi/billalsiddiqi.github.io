@@ -3,14 +3,18 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      'clashDisplay': ['"Clash Display"', 'sans-serif'] 
+      'clashDisplay': ['"Clash Display"', 'sans-serif']
     },
     extend: {
+      fontFamily: {
+        "cyberCity": "Cyber City"
+      },
       colors: {
         dark: '#212121',
         ribbon: '#FFC107',
         darkBorder: '#464646',
-        lightBorder: '#E7E7E7'
+        lightBorder: '#E7E7E7',
+        naturalGrey: '#838383'
       },
       spacing: {
         'fullHeight': 'calc(100vh - 160px)',
